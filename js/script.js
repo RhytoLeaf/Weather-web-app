@@ -22,6 +22,10 @@ async function getWeatherByLocation(city) {
     console.log(respData);
 
     addWeatherToPage(respData);
+
+    //Set h1 element text value
+    city_to_header_tag(city);
+
 }
 
 /**
@@ -59,6 +63,7 @@ function addWeatherToPage(data) {
     main.innerHTML = "";
 
     main.appendChild(weather);
+
 }
 
 /**
